@@ -8,4 +8,9 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\MensWearBackend.Application\MensWearBackend.Application.csproj" />
+    <ProjectReference Include="..\MensWearBackend.Infrastructure\MensWearBackend.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>
