@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31402.337
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MensWearBackend.Api", "MensWearBackend.Api\MensWearBackend.Api.csproj", "{8A3F318D-20B4-42C8-8923-7831360C6EB8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MensWearBackend.Tests", "MensWearBackend.Tests\MensWearBackend.Tests.csproj", "{1CD69C84-BDFD-4DF7-AC6D-F9479B4D8C84}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MensWearBackend.Domain", "MensWearBackend.Domain\MensWearBackend.Domain.csproj", "{4CE53A45-83E7-4460-A936-0315B2EDE904}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{EF0404C7-0B45-4683-A4CA-B4F22C14E414}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{9220F728-1BBF-4ECF-BA71-5BADF068DA42}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MensWearBackend.Infrastructure", "MensWearBackend.Infrastructure\MensWearBackend.Infrastructure.csproj", "{8FBF980F-1403-47DF-9E3D-3555074E5D8A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8A3F318D-20B4-42C8-8923-7831360C6EB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A3F318D-20B4-42C8-8923-7831360C6EB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A3F318D-20B4-42C8-8923-7831360C6EB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A3F318D-20B4-42C8-8923-7831360C6EB8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1CD69C84-BDFD-4DF7-AC6D-F9479B4D8C84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CD69C84-BDFD-4DF7-AC6D-F9479B4D8C84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CD69C84-BDFD-4DF7-AC6D-F9479B4D8C84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CD69C84-BDFD-4DF7-AC6D-F9479B4D8C84}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4CE53A45-83E7-4460-A936-0315B2EDE904}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CE53A45-83E7-4460-A936-0315B2EDE904}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CE53A45-83E7-4460-A936-0315B2EDE904}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CE53A45-83E7-4460-A936-0315B2EDE904}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FBF980F-1403-47DF-9E3D-3555074E5D8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FBF980F-1403-47DF-9E3D-3555074E5D8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FBF980F-1403-47DF-9E3D-3555074E5D8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FBF980F-1403-47DF-9E3D-3555074E5D8A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8A3F318D-20B4-42C8-8923-7831360C6EB8} = {EF0404C7-0B45-4683-A4CA-B4F22C14E414}
+		{1CD69C84-BDFD-4DF7-AC6D-F9479B4D8C84} = {9220F728-1BBF-4ECF-BA71-5BADF068DA42}
+		{4CE53A45-83E7-4460-A936-0315B2EDE904} = {EF0404C7-0B45-4683-A4CA-B4F22C14E414}
+		{8FBF980F-1403-47DF-9E3D-3555074E5D8A} = {EF0404C7-0B45-4683-A4CA-B4F22C14E414}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4B6787C7-5EF1-432A-9A06-34FB88294579}
+	EndGlobalSection
+EndGlobal
