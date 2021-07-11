@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MensWearBackend.Domain.Abstract;
+using MensWearBackend.Infrastructure.Repositories;
 
 namespace MensWearBackend.Infrastructure
 {
@@ -20,6 +21,12 @@ namespace MensWearBackend.Infrastructure
                            b => b.MigrationsAssembly(typeof(ClothStoreDbContext).Assembly.FullName)));
 
             services.AddTransient<ICategoryRepository, CategoryRepository>();
+            services.AddTransient<IUserRepository, UserRepository>();
+            services.AddTransient<IProductRepository, ProductRepository>();
+            services.AddTransient<IProductOrderRepository, ProductOrderRepository>();
+            services.AddTransient<IOrderRepository, OrderRepository>();
+            services.AddTransient<ICartRepository, CartRepository>();
+
             return services;
         }
     }
