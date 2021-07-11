@@ -1,4 +1,4 @@
-﻿using MensWearBackend.Domain.Abstract;
+﻿using MensWearBackend.Domain.Abstract.Base;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;

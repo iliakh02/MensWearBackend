@@ -1,4 +1,4 @@
-﻿using MensWearBackend.Domain.Abstract;
+﻿using MensWearBackend.Domain.Abstract.Base;
 using System.ComponentModel.DataAnnotations;
 
 namespace MensWearBackend.Domain.Entities

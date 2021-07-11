@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MensWearBackend.Domain.Abstract
+namespace MensWearBackend.Domain.Abstract.Base
 {
-    internal interface IEntityBase
+    public interface IEntityBase
     {
         int Id { get; set; }
     }
