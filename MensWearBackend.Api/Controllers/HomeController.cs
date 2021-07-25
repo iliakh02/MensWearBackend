@@ -8,8 +8,6 @@ using System.Threading.Tasks;
 namespace MensWearBackend.Api.Controllers
 {
     [ApiController]
-
-    [Route("")]
     [Route("[controller]")]
     [Route("[controller]/[action]")]
     public class HomeController : ControllerBase
@@ -19,9 +17,17 @@ namespace MensWearBackend.Api.Controllers
         {
             _productRepository = productRepository;
         }
-        public async Task<JsonResult> Index()
+
+        [HttpGet("")]
+        public JsonResult Index()
         {
-            return new JsonResult((await _productRepository.GetAllAsync()).Take(10));
+            return new JsonResult(_productRepository.GetAll().Take(8));
+        }
+
+        [HttpGet("/ser")]
+        public JsonResult Ser()
+        {
+            return new JsonResult((new { a = 5 }));
         }
     }
 }

@@ -8,11 +8,11 @@ namespace MensWearBackend.Domain.Abstract.Base
 {
     public interface IEntityBaseRepository<T> where T: class, IEntityBase
     {
-        Task<List<T>> GetAllAsync();
-        Task<T> GetByIdAsync(int id);
-        Task AddAsync(T entity);
+        List<T> GetAll();
+        T GetById(int id);
+        void Add(T entity);
         void Update(T entity);
         void Delete(T entity);
-        Task CommitAsync();
+        void Commit();
     }
 }

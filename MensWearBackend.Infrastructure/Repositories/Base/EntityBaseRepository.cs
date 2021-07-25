@@ -17,14 +17,14 @@ namespace MensWearBackend.Infrastructure.Repositories.Base
             _context = dbContext;
         }
 
-        public async Task AddAsync(T entity)
+        public void Add(T entity)
         {
-            await _context.Set<T>().AddAsync(entity);
+            _context.Set<T>().Add(entity);
         }
 
-        public async Task CommitAsync()
+        public void Commit()
         {
-            await _context.SaveChangesAsync();
+            _context.SaveChanges();
         }
 
         public void Delete(T entity)
@@ -32,14 +32,14 @@ namespace MensWearBackend.Infrastructure.Repositories.Base
             _context.Set<T>().Remove(entity);
         }
 
-        public async Task<List<T>> GetAllAsync()
+        public List<T> GetAll()
         {
-            return await _context.Set<T>().ToListAsync();
+            return _context.Set<T>().ToList();
         }
 
-        public async Task<T> GetByIdAsync(int id)
+        public T GetById(int id)
         {
-            return await _context.Set<T>().FindAsync(id);
+            return _context.Set<T>().Find(id);
         }
 
         public void Update(T entity)
