@@ -18,7 +18,10 @@ namespace MensWearBackend.Api.Controllers
             _productRepository = productRepository;
         }
 
-        [HttpGet("")]
+        [HttpGet]
+        [Route("/")]
+        [Route("/home")]
+        [Route("/home/index")]
         public JsonResult Index()
         {
             return new JsonResult(_productRepository.GetAll().Take(8));
