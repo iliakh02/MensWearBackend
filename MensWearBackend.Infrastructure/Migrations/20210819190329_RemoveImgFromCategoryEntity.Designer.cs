@@ -4,14 +4,16 @@ using MensWearBackend.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace MensWearBackend.Infrastructure.Migrations
 {
     [DbContext(typeof(ClothStoreDbContext))]
-    partial class ClothStoreDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210819190329_RemoveImgFromCategoryEntity")]
+    partial class RemoveImgFromCategoryEntity
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

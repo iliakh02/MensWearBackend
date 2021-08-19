@@ -10,7 +10,6 @@ namespace MensWearBackend.Domain.Entities
         [Required]
         [MaxLength(100)]
         public string Name { get; set; }
-        public string Image { get; set; }
         [System.Text.Json.Serialization.JsonIgnore]
         public ICollection<Product> Products { get; set; }
     }
