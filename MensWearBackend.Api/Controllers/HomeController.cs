@@ -21,16 +21,9 @@ namespace MensWearBackend.Api.Controllers
         [HttpGet]
         [Route("/")]
         [Route("/home")]
-        [Route("/home/index")]
         public JsonResult Index()
         {
             return new JsonResult(_productRepository.GetAll().Take(8));
-        }
-
-        [HttpGet("/ser")]
-        public JsonResult Ser()
-        {
-            return new JsonResult((new { a = 5 }));
         }
     }
 }

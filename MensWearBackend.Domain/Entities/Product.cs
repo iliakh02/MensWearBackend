@@ -29,7 +29,9 @@ namespace MensWearBackend.Domain.Entities
         [Column(TypeName = "decimal(18,2)")]
         public decimal Price { get; set; }
 
+        [System.Text.Json.Serialization.JsonIgnore]
         public ICollection<CartItem> CartItems { get; set; }
+        [System.Text.Json.Serialization.JsonIgnore]
         public ICollection<ProductOrder> ProductOrders { get; set; }
     }
 }

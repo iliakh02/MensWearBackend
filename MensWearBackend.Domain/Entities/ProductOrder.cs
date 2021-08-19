@@ -8,9 +8,11 @@ namespace MensWearBackend.Domain.Entities
         public int Id { get; set; }
         [Required]
         public int ProductId { get; set; }
+        [System.Text.Json.Serialization.JsonIgnore]
         public Product Product { get; set; }
         [Required]
         public int OrderId { get; set; }
+        [System.Text.Json.Serialization.JsonIgnore]
         public Order Order { get; set; }
         [Required]
         public int Amount { get; set; }

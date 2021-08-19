@@ -18,7 +18,9 @@ namespace MensWearBackend.Domain.Entities
         [MinLength(8)]
         public string Password { get; set; }
 
+        [System.Text.Json.Serialization.JsonIgnore]
         public ICollection<Order> Orders { get; set; }
+        [System.Text.Json.Serialization.JsonIgnore]
         public ICollection<CartItem> Cart { get; set; }
         public int Id { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
     }

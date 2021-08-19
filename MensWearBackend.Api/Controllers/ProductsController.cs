@@ -1,6 +1,7 @@
 ﻿using MensWearBackend.Domain.Abstract;
 using MensWearBackend.Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,22 +14,24 @@ namespace MensWearBackend.Api.Controllers
     {
         private readonly IProductRepository _productRepository;
         private readonly ICategoryRepository _categoryRepository;
-        public int PageSize { get; } = 4;
-        public ProductsController(IProductRepository productRepository)
+        public ProductsController(IProductRepository productRepository, ICategoryRepository categoryRepository)
         {
             _productRepository = productRepository;
+            _categoryRepository = categoryRepository;
         }
 
         [HttpGet]
-        public JsonResult Index(int page = 1)
+        public JsonResult Index(int pageSize, int page = 1)
         {
             var categories = _categoryRepository.GetAll();
-            var productsPerPage = _productRepository.GetAll().Skip((page - 1) * PageSize).Take(PageSize).ToList();
-            return Json (new { 
+            var products = _productRepository.GetAll();
+            var productsPerPage = products.Skip((page - 1) * pageSize).Take(pageSize);
+            return new JsonResult(new { 
                 products = productsPerPage,
-                categories, 
                 currentPage = page, 
-                pageSize = PageSize});
+                pageSize = pageSize,
+                totalItems = products.Count
+            });
         }
     }
 }
