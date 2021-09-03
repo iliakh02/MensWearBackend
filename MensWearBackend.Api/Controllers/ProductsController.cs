@@ -21,17 +21,34 @@ namespace MensWearBackend.Api.Controllers
         }
 
         [HttpGet]
-        public JsonResult Index(int pageSize, int page = 1)
+        public JsonResult Index(int pageSize, int page = 1, int categoryId = 0, string searchString = "")
         {
-            var categories = _categoryRepository.GetAll();
             var products = _productRepository.GetAll();
+            if (categoryId != 0)
+            {
+                products = products.Where(n => n.CategoryId == categoryId).ToList();
+            }
+            if(!string.IsNullOrEmpty(searchString))
+                products = products.Where(n => n.Name.Contains(searchString)).ToList();
+
             var productsPerPage = products.Skip((page - 1) * pageSize).Take(pageSize);
             return new JsonResult(new { 
                 products = productsPerPage,
                 currentPage = page, 
                 pageSize = pageSize,
-                totalItems = products.Count
+                totalItems = products.Count,
+                categoryId,
+                searchString
             });
+        }
+
+        [HttpGet]
+        [Route("{id}")]
+        public JsonResult Details(int id)
+        {
+            var product = _productRepository.GetById(id);
+
+            return new JsonResult(product);
         }
     }
 }
